@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
   <head>
     <title>Download the AllJoyn&#8482; Source</title>
@@ -6,7 +7,7 @@
   <body>
     <div id="header">
       <div class="logo">
-        <a href="index.html"><img src="img/logo.png" alt="AllJoyn Logo - "></a>
+        <a href="index.html"><img src="img/logo.gif" alt="AllJoyn Logo - "></a>
       </div> <!-- //.logo -->
     </div> <!-- //#header -->
     <div id="main">
@@ -30,7 +31,7 @@
       <hr/>
 
       <h2><a id="Linux"></a>On Linux</h2>
-
+      
       <h3>Login to a bash shell</h3>
 
       <h3>Make sure that Python and git are installed</h3>
@@ -62,7 +63,7 @@
       
       <span style="font-family:courier new;">
       <blockquote>
-        <p> $ curl http://android.git.kernel.org/repo &gt; $HOME/bin/repo<br>
+        <p> $ curl https://dl-ssl.google.com/dl/googlesource/git-repo/repo &gt; repo<br>
           $ chmod a+x $HOME/bin/repo
         </p>
       </blockquote></span>
@@ -91,18 +92,34 @@
 	<span style="font-family:courier new;">
       <blockquote>
         <p>$ repo init -u git://github.com/alljoyn/manifest.git -b
-        experimental<br>
+        B02.03.00<br>
           $ repo sync <br>
-          $ repo start experimental --all
+          $ repo start B02.03.00 --all
       </blockquote></span>
 
       <h3>Update the AllJoyn source in that location at any time...</h3>
       <p>... by running <span style="font-family:courier new;">repo
       sync</span> again.</p>
       
-      <hr>
+      <h3>Additional Help for setting up Linux for AllJoyn development</h3>
+      <p>Additional documentation is available that goes into greater depth 
+      about how to setup a Linux environment for AllJoyn development. The 
+      documentation is available from the <a href="https://www.alljoyn.org/docs-and-downloads">
+      Docs &amp; Downloads</a> section  of <a href="https://www.alljoyn.org/">
+      www.alljoyn.org</a>.</p>
 
-      <h2><a id="Windows"></a>Using Cygwin on Windows</h2>
+      <hr>
+      <h2><a id="Windows"></a>On Windows</h2>
+      <h3>Not Using Cygwin</h3>
+      <p> Currently the project management tool &quot;repo&quot; is only 
+      available for Linux.  Repo can run in Windows using Cygwin, or it is 
+      possible to download each git repository required for AllJoyn without 
+      using Cygwin.  For instructions on setting up Windows for AllJoyn 
+      without using Cygwin see the <a href="https://www.alljoyn.org/docs-and-downloads">
+      Docs &amp; Downloads</a> section  of <a href="https://www.alljoyn.org/">www.alljoyn.org</a>.
+      </p>
+      
+      <h3>Using Cygwin</h3>
       <p>AllJoyn does not compile or run on Cygwin, but you can use git and
         repo on Cygwin to download the AllJoyn source on a Windows machine.
         Unless you already have git and repo working in an existing Cygwin
@@ -166,7 +183,7 @@
       <span style="font-family:courier new;">
       <blockquote>
         <p> $ mkdir $HOME/bin<br>
-          $ curl http://android.git.kernel.org/repo &gt; $HOME/bin/repo<br>
+          $ curl https://dl-ssl.google.com/dl/googlesource/git-repo/repo &gt; $HOME/bin/repo<br>
           $ chmod a+x $HOME/bin/repo
         </p>
       </blockquote></span>
